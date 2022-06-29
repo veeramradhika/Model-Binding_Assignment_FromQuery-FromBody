@@ -82,7 +82,7 @@ namespace MyFirstWebAPI.Controllers
             }
             else
             {
-                employeeName.EmployeeName = employeeName.EmployeeName;
+                employeeName.EmployeeName = employee.EmployeeName;
 
                 var serializedOutput = JsonConvert.SerializeObject(employeeName);
                 return Ok($"{serializedOutput} Employee updated");
