@@ -47,7 +47,7 @@ namespace MyFirstWebAPI.Controllers
         public ActionResult AddEmployeeEduFromQuery([FromQuery] int EmployeeEducationId, [FromQuery] string CourseName, [FromQuery] string UniversityName, [FromQuery] int MarksPercentage, [FromQuery] int EmployeeId)
         {
             employeeEducations.Add(new EmployeeEducation { EmployeeEducationId = EmployeeEducationId, CourseName = CourseName, UniversityName = UniversityName, MarksPercentage = MarksPercentage, EmployeeId = EmployeeId });
-            var serializedOutput = JsonConvert.SerializeObject(employeeEducations[employeeEducations.Count - 1]);
+            var serializedOutput = JsonConvert.SerializeObject(employeeEducations);
             return Ok($"{serializedOutput} employee Education List is added");
         }
 
